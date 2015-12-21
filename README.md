@@ -10,4 +10,7 @@ Hit http://localhost:8182/ <BR>
 Got to "The Dog House" to browse the graph <BR>
 ## Rest APIS
 https://github.com/tinkerpop/rexster/wiki/Basic-REST-API
+## Rexster WIKI
+https://github.com/tinkerpop/rexster/wiki/Introduction
+
 
