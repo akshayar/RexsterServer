@@ -4,4 +4,6 @@ This makes it easy to debug.
 ## Getting started
 Clone the repository. <BR> 
 Import the project as eclipse project. <BR> 
-Run using eclipse launch configuration Rexster-Application.launch
+Edit titan DB configuration in src/main/resources/rexster-berkley.xml file. You may want to edit graphs/graph node and point to your DB file. <BR>
+Run using eclipse launch configuration Rexster-Application.launch <BR>
+
