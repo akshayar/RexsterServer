@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.aksh.tinker</groupId>
+	<artifactId>RexsterServer</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<properties>
+		<titandb-version>0.5.4</titandb-version>
+		<rexster-server-version>2.5.0</rexster-server-version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>com.tinkerpop.rexster</groupId>
+			<artifactId>rexster-server</artifactId>
+			<version>${rexster-server-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.thinkaurelius.titan</groupId>
+			<artifactId>titan-rexster</artifactId>
+			<version>${titandb-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.thinkaurelius.titan</groupId>
+			<artifactId>titan-berkeleyje</artifactId>
+			<version>${titandb-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.thinkaurelius.titan</groupId>
+			<artifactId>titan-es</artifactId>
+			<version>${titandb-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.tinkerpop.rexster.rexster-kibbles</groupId>
+			<artifactId>sample-kibbles</artifactId>
+			<version>${rexster-server-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.tinkerpop.rexster.rexster-kibbles</groupId>
+			<artifactId>batch-kibble</artifactId>
+			<version>${rexster-server-version}</version>
+		</dependency>
+	</dependencies>
+</project>
