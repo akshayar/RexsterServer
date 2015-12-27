@@ -93,18 +93,28 @@
 			<graph-type>com.thinkaurelius.titan.tinkerpop.rexster.TitanGraphConfiguration
 			</graph-type>
 			<graph-read-only>false</graph-read-only>
-			<graph-location>D:\other-projects\graph-db\titan\titan-0.5.4-hadoop2\db\berkeley
+			<graph-location>D:\other-projects\graph-db\titan\enron-data\db\berkeley
 			</graph-location>
 			<properties>
 				<storage.backend>berkeleyje</storage.backend>
-				<storage.directory>D:\other-projects\graph-db\titan\titan-0.5.4-hadoop2\db
+				<storage.directory>D:\other-projects\graph-db\titan\enron-data\db\berkeley
 				</storage.directory>
 				<buffer-size>100</buffer-size>
 			</properties>
 			<extensions>
 				<allows>
 					<allow>tp:gremlin</allow>
+					<allow>tp-sample:*</allow>
+					<allow>tp:batch</allow>
 				</allows>
+				<extension>
+					<namespace>tp-sample</namespace>
+					<name>map-config</name>
+					<configuration>
+						<some-key>some-value</some-key>
+						<other-key>other-value</other-key>
+					</configuration>
+				</extension>
 			</extensions>
 		</graph>
 	</graphs>
