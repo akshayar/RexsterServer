@@ -4,7 +4,7 @@
 		<server-port>8182</server-port>
 		<server-host>0.0.0.0</server-host>
 		<base-uri>http://localhost</base-uri>
-		<web-root>src/main/resources/public</web-root>
+		<web-root>src/main/webapp/public</web-root>
 		<character-set>UTF-8</character-set>
 		<enable-jmx>false</enable-jmx>
 		<enable-doghouse>true</enable-doghouse>
@@ -106,6 +106,7 @@
 					<allow>tp:gremlin</allow>
 					<allow>tp-sample:*</allow>
 					<allow>tp:batch</allow>
+					<allow>rex:crud</allow>
 				</allows>
 				<extension>
 					<namespace>tp-sample</namespace>

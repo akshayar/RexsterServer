@@ -39,5 +39,10 @@
 			<artifactId>batch-kibble</artifactId>
 			<version>${rexster-server-version}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.aksh.tinker</groupId>
+			<artifactId>RexCustomService</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 </project>
