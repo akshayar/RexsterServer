@@ -1,4 +1,4 @@
-# Running Rexster server from eclise and maven
+# Running Rexster server from eclipse and maven
 The project is created to help people run Rexster and kibles from eclipse. A project to add custom extension is also added.
 The project has two child projects - 
 
