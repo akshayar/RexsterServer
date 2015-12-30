@@ -93,27 +93,31 @@
 			<graph-type>com.thinkaurelius.titan.tinkerpop.rexster.TitanGraphConfiguration
 			</graph-type>
 			<graph-read-only>false</graph-read-only>
-			<graph-location>D:\other-projects\graph-db\titan\enron-data\db\berkeley
-			</graph-location>
+			<graph-location>D:/other-projects/graph-db/titan/enron-data/db/berkeley</graph-location>
 			<properties>
 				<storage.backend>berkeleyje</storage.backend>
-				<storage.directory>D:\other-projects\graph-db\titan\enron-data\db\berkeley
-				</storage.directory>
+				<storage.directory>D:/other-projects/graph-db/titan/enron-data/db/berkeley</storage.directory>
 				<buffer-size>100</buffer-size>
+				<index.search.backend>elasticsearch</index.search.backend>
+				<index.search.directory>D:/other-projects/graph-db/titan/enron-data/db/es</index.search.directory>
+				<index.search.elasticsearch.client-only>false</index.search.elasticsearch.client-only>
+				<index.search.elasticsearch.local-mode>true</index.search.elasticsearch.local-mode>
 			</properties>
 			<extensions>
 				<allows>
 					<allow>tp:gremlin</allow>
-					<allow>tp-sample:*</allow>
-					<allow>tp:batch</allow>
-					<allow>rex:crud</allow>
+					<!-- <allow>tp-sample:*</allow> <allow>tp:batch</allow> <allow>rex:crud</allow> -->
 				</allows>
+				<!-- <extension> <namespace>tp-sample</namespace> <name>map-config</name> 
+					<configuration> <some-key>some-value</some-key> <other-key>other-value</other-key> 
+					</configuration> </extension> -->
 				<extension>
-					<namespace>tp-sample</namespace>
-					<name>map-config</name>
+					<namespace>tp</namespace>
+					<name>gremlin</name>
 					<configuration>
-						<some-key>some-value</some-key>
-						<other-key>other-value</other-key>
+						<scripts>script-directory</scripts>
+						<allow-client-script>true</allow-client-script>
+						<cache-scripts>true</cache-scripts>
 					</configuration>
 				</extension>
 			</extensions>
