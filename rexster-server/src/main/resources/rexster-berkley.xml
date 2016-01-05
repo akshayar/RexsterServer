@@ -93,15 +93,21 @@
 			<graph-type>com.thinkaurelius.titan.tinkerpop.rexster.TitanGraphConfiguration
 			</graph-type>
 			<graph-read-only>false</graph-read-only>
-			<graph-location>D:/other-projects/graph-db/titan/enron-data/db/berkeley</graph-location>
+			<graph-location>D:/other-projects/graph-db/titan/enron-data/db/berkeley
+			</graph-location>
 			<properties>
 				<storage.backend>berkeleyje</storage.backend>
-				<storage.directory>D:/other-projects/graph-db/titan/enron-data/db/berkeley</storage.directory>
+				<storage.directory>D:/other-projects/graph-db/titan/enron-data/db/berkeley
+				</storage.directory>
 				<buffer-size>100</buffer-size>
 				<index.search.backend>elasticsearch</index.search.backend>
-				<index.search.directory>D:/other-projects/graph-db/titan/enron-data/db/es</index.search.directory>
-				<index.search.elasticsearch.client-only>false</index.search.elasticsearch.client-only>
-				<index.search.elasticsearch.local-mode>true</index.search.elasticsearch.local-mode>
+				<index.search.hostname>localhost</index.search.hostname>
+				<index.search.elasticsearch.client-only>true</index.search.elasticsearch.client-only>
+				<index.search.elasticsearch.local-mode>false</index.search.elasticsearch.local-mode>
+	<!-- <index.search.directory>D:/other-projects/graph-db/titan/enron-data/db/es</index.search.directory> 
+		<index.search.elasticsearch.client-only>false</index.search.elasticsearch.client-only> 
+		<index.search.elasticsearch.local-mode>true</index.search.elasticsearch.local-mode> 
+	-->
 			</properties>
 			<extensions>
 				<allows>
