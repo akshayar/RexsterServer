@@ -1,19 +1,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.aksh.tinker</groupId>
 	<artifactId>RexsterServer</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<parent>
+		<groupId>com.aksh.tinker</groupId>
+		<artifactId>RexServiceParent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
 	<properties>
-		<titandb-version>0.5.4</titandb-version>
-		<rexster-server-version>2.5.0</rexster-server-version>
+		<titandb-version>1.0.0</titandb-version>
+		<tinkerpop-version>3.0.1-incubating</tinkerpop-version>
 	</properties>
 	<dependencies>
-		<dependency>
-			<groupId>com.thinkaurelius.titan</groupId>
-			<artifactId>titan-rexster</artifactId>
-			<version>${titandb-version}</version>
-		</dependency>
 		<dependency>
 			<groupId>com.thinkaurelius.titan</groupId>
 			<artifactId>titan-berkeleyje</artifactId>
@@ -25,28 +23,11 @@
 			<version>${titandb-version}</version>
 		</dependency>
 		<dependency>
-			<groupId>com.tinkerpop.rexster</groupId>
-			<artifactId>rexster-server</artifactId>
-			<version>${rexster-server-version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.tinkerpop.rexster.rexster-kibbles</groupId>
-			<artifactId>sample-kibbles</artifactId>
-			<version>${rexster-server-version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.tinkerpop.rexster.rexster-kibbles</groupId>
-			<artifactId>batch-kibble</artifactId>
-			<version>${rexster-server-version}</version>
-		</dependency>
-		<!-- Custom Rexster Extension -->
-		<dependency>
-			<groupId>com.aksh.tinker</groupId>
-			<artifactId>RexCustomService</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<groupId>org.apache.tinkerpop</groupId>
+			<artifactId>gremlin-server</artifactId>
+			<version>${tinkerpop-version}</version>
 		</dependency>
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -55,11 +36,9 @@
 				<version>1.4.0</version>
 				<configuration>
 					<executable>java</executable>
-					<mainClass>com.tinkerpop.rexster.Application</mainClass>
+					<mainClass>org.apache.tinkerpop.gremlin.server.GremlinServer</mainClass>
 					<arguments>
-						<argument>-s</argument>
-						<argument>-c</argument>
-						<argument>src/main/resources/rexster-berkley.xml</argument>
+						<argument>src/main/resources/gremlin-server.yaml</argument>
 					</arguments>
 				</configuration>
 			</plugin>
